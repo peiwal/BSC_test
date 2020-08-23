@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/navigation" app:startDestination="@id/fragmentListParty">
+
+    <fragment android:id="@+id/fragmentListParty"
+              android:name="petrov.ivan.bsc.ui.listParty.FragmentListParty"
+              android:label="@string/app_name">
+        <action android:id="@+id/action_fragmentListParty_to_fragmentPlaceInfo"
+                app:destination="@id/fragmentPlaceInfo" app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment android:id="@+id/fragmentPlaceInfo" android:name="petrov.ivan.bsc.ui.placeInfo.FragmentPlaceInfo">
+        <argument android:name="party" app:argType="petrov.ivan.bsc.data.Party"/>
+    </fragment>
+</navigation>

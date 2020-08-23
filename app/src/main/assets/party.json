@@ -1,0 +1,38 @@
+{"parties":[
+  {"name":"Именины",
+    "imgUrl":"https://i.imgur.com/mBEM1Pw.jpg",
+    "inviter":{"name":"Кристина","phone":"+79199003394"},
+    "listOfInvitees":[
+      {"name":"Олег","phone":"+79199440688"},
+      {"name":"Вадим","phone":"+79448375143"},
+      {"name":"Александра","phone":"+79827775144"}
+    ],
+    "place":{"address":"Mocква, ГУМ","coord":{"lat":55.75429,"lon":37.61931}}},
+  {"name":"Xbox party",
+    "imgUrl":"https://i.imgur.com/iCrSlL1.jpg",
+    "inviter":{"name":"Савелий","phone":"+79199067688"},
+    "listOfInvitees":[
+      {"name":"Игорь","phone":"+79828376743"},
+      {"name":"Марат","phone":"+79828675144"}],
+    "place":{"address":"Ижевск, ул. Пушкинсая 268","coord":{"lat":56.86309,"lon":53.2082}}},
+  {"name":"Gangsta party",
+    "imgUrl":"https://i.imgur.com/lclksvB.png",
+    "inviter":{"name":"Джеймс","phone":"+79199067688"},
+    "listOfInvitees":[
+      {"name":"Юлия","phone":"+79828345143"}],
+    "place":{"address":"Ижевск, ул. Циолковскогог 13","coord":{"lat":56.8374,"lon":53.24239}}},
+  {"name":"Obama Birthday",
+    "imgUrl":"https://i.imgur.com/QixjNM8.jpg",
+    "inviter":{"name":"Иван","phone":"+7919999988"},
+    "listOfInvitees":[
+      {"name":"Екатерина","phone":"+7982853443"},
+      {"name":"Снежана","phone":"+79828359044"}],
+    "place":{"address":"Вашингтон, Белый дом","coord":{"lat":38.8969,"lon":-77.03707}}},
+  {"name":"Дискотека",
+    "imgUrl":"https://i.imgur.com/2TBpeV6.jpg",
+    "inviter":{"name":"Николай","phone":"+79199012688"},
+    "listOfInvitees":[
+      {"name":"Артемий","phone":"+79828674243"},
+      {"name":"Надежда","phone":"+79828388924"}],
+    "place":{"address":"Париж, Эйфелева башня","coord":{"lat":48.85829,"lon":2.29378}}}
+]}

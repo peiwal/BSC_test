@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Вечеринки</string>
+    <string name="frmItemTitle">Вечеринка</string>
+
+    <string name="error_load_data">Ошибка загрузки данных</string>
+    <string name="title_list_of_invitees">С Вами придут</string>
+    <string name="inviter_name_pref">Пригласил(а): %s</string>
+    <string name="btn_map_text">Карта</string>
+</resources>

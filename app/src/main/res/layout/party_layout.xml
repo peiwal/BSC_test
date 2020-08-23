@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="java.lang.String" />
+        <import type="java.lang.Float"/>
+        <variable name="party" type="petrov.ivan.bsc.data.Party"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" android:id="@+id/constraintLayout">
+
+        <ImageView android:id="@+id/ivParty"
+                   android:layout_width="0dp"
+                   android:layout_height="0dp"
+                   tools:srcCompat="@tools:sample/avatars[0]"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:imageParty="@{party.imgUrl}"
+                   android:scaleType="centerCrop"
+                   app:layout_constraintDimensionRatio="h,2:1"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutInviter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivParty">
+
+            <ImageView
+                    android:id="@+id/ivInviter"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:imagePerson="@{party.inviter.imgUri}"
+                    tools:src="@drawable/ic_person"/>
+
+            <TextView
+                    android:id="@+id/tvPartyName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivInviter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="24sp"
+                    android:textColor="@color/textPrimary"
+                    android:text="@{party.name}"
+                    tools:text="Именины"/>
+
+            <TextView
+                    android:id="@+id/tvInviterName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivInviter"
+                    app:layout_constraintTop_toBottomOf="@id/tvPartyName"
+                    android:textSize="14sp"
+                    android:textColor="@color/textSecondary"
+                    android:text="@{@string/inviter_name_pref(party.inviter.name)}"
+                    tools:text="Пригласил(а): Кристина"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+                android:id="@+id/tvTitleListOfInvitees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginEnd="16dp"
+                android:text="@string/title_list_of_invitees"
+                android:textColor="@color/textSecondary"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutInviter" />
+
+        <LinearLayout
+                android:id="@+id/llInvitees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleListOfInvitees" />
+
+        <Button
+                android:id="@+id/btnMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/btn_map_text"
+                android:textAllCaps="true"
+                android:textColor="@color/textBtnMap"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llInvitees" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
